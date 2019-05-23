@@ -4,11 +4,14 @@
   "description": "my blogs website end",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev-debug": "nodemon --inspect --watch"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.0"
+    "connect-history-api-fallback": "^1.6.0",
+    "express": "^4.17.0",
+    "nodemon": "^1.19.0"
   }
 }

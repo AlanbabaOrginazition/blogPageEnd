@@ -40,6 +40,9 @@ module.exports = {
     });
     app.use('/', require('../routes'));
     app.use(express.static('public'));
+    app.use('/*', (req,res,next) => {
+      res.sendFile(path.resolve(__dirname, '../public/index.html'));
+    });
     // const httpsServer = https.createServer(credentials, app);
     const httpsServer = http.createServer(credentials, app);
     httpsServer.listen(config.port, config.ip, () => {

@@ -44,7 +44,7 @@ module.exports = {
       res.sendFile(path.resolve(__dirname, '../public/index.html'));
     });
     // const httpsServer = https.createServer(credentials, app);
-    const httpsServer = http.createServer(credentials, app);
+    const httpsServer = http.createServer(app);
     httpsServer.listen(config.port, config.ip, () => {
       console.log(`https server started at port -- ${config.port}`);
     });
